@@ -1,0 +1,219 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width-device-width, initial-scale-1.0">
+  <title>sanrio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="logo-margarita.ico" />	
+  </head>
+   <body background="fondo gato.jpg" style="background-repeat: no-repeat; background-position: center; background-size: cover">
+   <header>
+  
+	   <nav class="navbar">
+	      <ul>
+		   <li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="sanrio family.html">Sanrio family</a></li>
+			<li><a href="productos.html">Productos</a></li>
+			<li><a href="contactar.html">Contacto</a></li>
+		  </ul>
+	   </nav>
+	   
+	   <div class="fas fa-bars"> </div>
+	   <br>
+   </header>
+   <img src="banner4.png" width="2000" height="450" >
+   
+   <section class="contact" id="contact">
+   <br><br><br>
+      <h1 class="heading">Compras</h1>
+	  <h3 class="title">Si quieres obtener más información o realizar cualquier pedido contactanos:</h3>
+       <div class="form-container">
+	        <form>
+			
+            <legend>Datos para entrega de pedido</legend>
+			    <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Correo">
+				<input type="number" placeholder="Telefono">
+				<textarea cols="15" placeholder="Mensaje"></textarea>
+				<input type="submit" value="Enviar">
+			</form>
+			<table>
+<form>
+<fieldset>
+<legend>Método de pago</legend>
+<select name="menu">
+<option> Efectivo</option>
+<option> Con tarjeta </option>
+<option> Bizum </option>
+</table>
+
+<table>
+<input type="button" onclick="mensaje (Hapulsado el botón)" value="Ok">
+</table>
+   
+   </section>
+   <section class="redes" id="redes">
+   <br><br><br>
+	  <h3 class="heading">Siguenos también en redes sociales</h3>
+	 <a href="https://www.instagram.com/sanrio/?hl=es"><img src="insta.jpg" width="300" height="300" ></a>
+     <a href=" https://www.facebook.com/Sanrio/?locale=es_ES"><img src="facebook.png" width="300" height="300" ></a>
+	  <a href="https://twitter.com/sanrio?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="twitter.jpg" width="300" height="300" ></a>
+  
+   </section>
+   <section class="piedeweb" id="piedeweb">
+			 <h3>María Cabezas López</h3>
+    </section>
+	</body>
+	
+	<TITLE>JavaScript Index</TITLE>
+
+<script Language="JavaScript">
+
+<!-- Helpers for JSI page...
+
+// Navigation - Start
+
+function goback(){
+
+alert("Good Bye!");
+
+history.go(-1);
+
+}
+
+function gettheDate() {
+
+Todays = new Date();
+
+TheDate = "" + (Todays.getMonth()+ 1) +" / "+ Todays.getDate() + " / " + (Todays.getYear() + 1900) 
+
+document.clock.thedate.value = TheDate;
+
+}
+
+// Navigation - Stop
+
+// Netscapes Clock - Start
+
+// this code was taken from Netscapes JavaScript documentation at
+
+// www.netscape.com on Jan.25.96
+
+
+
+var timerID = null;
+
+var timerRunning = false;
+
+function stopclock (){
+
+	if(timerRunning)
+
+		clearTimeout(timerID);
+
+	timerRunning = false;
+
+}
+
+
+
+function startclock () {
+
+	// Make sure the clock is stopped
+
+	stopclock();
+
+	gettheDate()
+
+	showtime();
+
+}
+
+
+
+function showtime () {
+
+	var now = new Date();
+
+	var hours = now.getHours();
+
+	var minutes = now.getMinutes();
+
+	var seconds = now.getSeconds()
+
+	var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+	timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+
+	timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+
+	timeValue += (hours >= 12) ? " P.M." : " A.M."
+
+	document.clock.face.value = timeValue;
+
+	// you could replace the above with this
+
+	// and have a clock on the status bar:
+
+	// window.status = timeValue;
+
+	timerID = setTimeout("showtime()",1000);
+
+	timerRunning = true;
+
+}
+
+// Netscapes Clock - Stop
+
+
+
+// end Helpers -->
+
+</script>
+
+</HEAD>
+
+
+
+<BODY bgcolor="#00FFFF" onLoad="startclock()">
+
+
+
+
+
+<CENTER>
+
+<table border>
+
+<tr>
+
+   <td><form name="clock" onSubmit="0"></td>
+
+</tr>
+
+
+
+<tr>
+
+   <td colspan=2>Hoy es: <input type="text" name="thedate" size=12
+
+           value=""></td>
+
+   <td colspan=2>La hora es: <input type="text" name="face" size=12
+
+           value=""></td></form>
+
+</tr>
+
+
+
+
+
+</table>
+
+</CENTER>
+
+
+
+<hr>
+	</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+	
+		 <meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <title>Pagina Web</title>
+		 
+		  <!-- font awesome cdn link  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+		<link rel="stylesheet" href="style.css" >
+	
+	</head>
+	
+	<body background="canela.jpg" style="background-repeat: no-repeat; background-position: center; background-size: cover">
+	
+		<header>
+			<a href="#" class="logo">Hello Friends!!</a>
+			
+			 <nav class="navbar">
+	      <ul>
+		    <li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="sanrio family.html">Sanrio family</a></li>
+			<li><a href="productos.html">Productos</a></li>
+			<li><a href="contactar.html">Contacto</a></li>
+		  </ul>
+	   </nav>
+	   
+	   <div class="fas fa-bars"> </div>
+
+			
+		</header>
+		<img src="banner4.png" width="2000" height="450" >
+		
+		
+		<section class="indice" id="indice">
+	
+	 <div class="content"> 
+	    <h1>Nuestra Familia</h1>
+		<p>Sanrio es una fmailia muy grande con miles de personajes. A continuación os presentamos a los más conocidos:</p>
+	 
+	 </div>
+	
+	</section>
+        <section class="personajes" id="personajes"> 
+		
+			<div class="box-container">
+				
+				<div class="box">
+					
+					<h3>Hello Kitty</h3>
+					<p>Hello Kitty tiene muchos gustos y hobbies, entre ellos, lo que más le fascina es aprender inglés y coleccionar pequeñas cosas como caramelos y peces de colores. Su comida favorita es la tarta de manzana hecha por su mamá, Mary Kitty. </p>
+				    <img src="hello kitty.jpg" width="300" height="300" >
+				</div>
+				
+				<div class="box">
+					
+					<h3>Canela</h3>
+					<p>Canela o Cinnamoroll es un cachorro blanco y peludo con orejas largas y una cola rizada, y es el líder de una banda llamada ShinganCrimsonZ. Sus compañeros de banda son Crow, Yaiba, Aion y Rom, y juntos interpretan un estilo único de música.</p>
+				    <img src="cinamon.jpg" width="300" height="300" >
+				</div>
+				
+				<div class="box">
+					
+					<h3>Chococat</h3>
+					<p>Chococat es el amigo que siempre está informado y sabe de todo. Su característica más marcante es la naricita color de chocolate</p>
+				    <img src="chococat.jpg" width="300" height="350" >
+				</div>
+				
+			</div>
+		
+		</section>
+		 <section class="personajes" id="personajes"> 
+		
+			<div class="box-container">
+				
+				<div class="box">
+					
+					<h3>Kuromi</h3>
+					<p>Su nombre proviene de la combinación de las palabras japonesas «kuro» que significa «negro» y «mi» que se traduce como «corazón». Kuromi se caracteriza por su actitud un poco más traviesa y por su estilo punk.
+</p>
+					<img src="kuromi.jpg" width="300" height="320" >
+				</div>
+				
+				<div class="box">
+					
+					<h3>Badtz-Maru</h3>
+					<p>Badtz-Maru es uno de los pocos personajes de Sanrio cuyos productos son vendidos tanto a niñas como a niños. Se caracteriza por ser un pingüino de buen corazón, de buena actitud y de carácter bueno y carismático</p>
+					<img src="maru.jpg" width="300" height="320" >
+				</div>
+				
+				<div class="box">
+				
+					<h3>My melody</h3>
+					<p>My Melody es una conejita muy curiosa, pero un poco precipitada a veces. Su mejor amigo es Flat un ratón de piel azul y Piano una oveja blanca que al igual que My Melody usa una capucha rosa.</p>
+					<img src="mymelody.jpg" width="300" height="320" >
+				</div>
+				
+			</div>
+		
+		</section>
+	<section class="piedeweb" id="piedeweb">
+			 <h3>María Cabezas López</h3>
+        </section>
+	
+	</body>
+	<TITLE>JavaScript Index</TITLE>
+
+<script Language="JavaScript">
+
+<!-- Helpers for JSI page...
+
+// Navigation - Start
+
+function goback(){
+
+alert("Good Bye!");
+
+history.go(-1);
+
+}
+
+function gettheDate() {
+
+Todays = new Date();
+
+TheDate = "" + (Todays.getMonth()+ 1) +" / "+ Todays.getDate() + " / " + (Todays.getYear() + 1900) 
+
+document.clock.thedate.value = TheDate;
+
+}
+
+// Navigation - Stop
+
+// Netscapes Clock - Start
+
+// this code was taken from Netscapes JavaScript documentation at
+
+// www.netscape.com on Jan.25.96
+
+
+
+var timerID = null;
+
+var timerRunning = false;
+
+function stopclock (){
+
+	if(timerRunning)
+
+		clearTimeout(timerID);
+
+	timerRunning = false;
+
+}
+
+
+
+function startclock () {
+
+	// Make sure the clock is stopped
+
+	stopclock();
+
+	gettheDate()
+
+	showtime();
+
+}
+
+
+
+function showtime () {
+
+	var now = new Date();
+
+	var hours = now.getHours();
+
+	var minutes = now.getMinutes();
+
+	var seconds = now.getSeconds()
+
+	var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+	timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+
+	timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+
+	timeValue += (hours >= 12) ? " P.M." : " A.M."
+
+	document.clock.face.value = timeValue;
+
+	// you could replace the above with this
+
+	// and have a clock on the status bar:
+
+	// window.status = timeValue;
+
+	timerID = setTimeout("showtime()",1000);
+
+	timerRunning = true;
+
+}
+
+// Netscapes Clock - Stop
+
+
+
+// end Helpers -->
+
+</script>
+
+</HEAD>
+
+
+
+<BODY bgcolor="#00FFFF" onLoad="startclock()">
+
+
+
+
+
+<CENTER>
+
+<table border>
+
+<tr>
+
+   <td><form name="clock" onSubmit="0"></td>
+
+</tr>
+
+
+
+<tr>
+
+   <td colspan=2>Hoy es: <input type="text" name="thedate" size=12
+
+           value=""></td>
+
+   <td colspan=2>La hora es: <input type="text" name="face" size=12
+
+           value=""></td></form>
+
+</tr>
+
+
+
+
+
+</table>
+
+</CENTER>
+
+
+
+<hr>
+
+</html>
