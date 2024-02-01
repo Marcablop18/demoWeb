@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+	
+		 <meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <title>Pagina Web</title>
+		 
+		  <!-- font awesome cdn link  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+		<link rel="stylesheet" href="style.css" >
+	
+	</head>
+	
+	<body background="fondo kuromi.jpg" style="background-repeat: no-repeat; background-position: center; background-size: cover">
+	
+		<header>
+			<a href="#" class="logo">Hello Friends!!</a>
+			
+			 <nav class="navbar">
+	      <ul>
+		    <li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="sanrio family.html">Sanrio family</a></li>
+			<li><a href="productos.html">Productos</a></li>
+			<li><a href="contactar.html">Contacto</a></li>
+		  </ul>
+	   </nav>
+	   
+	   <div class="fas fa-bars"> </div>
+
+			
+		</header>
+		<img src="banner4.png" width="2000" height="450" >
+		
+		
+		<section class="indice" id="indice">
+	
+	 <div class="content"> 
+	    <h1>Merchandising</h1>
+	 </div>
+	
+	</section>
+        <section class="product" id="product"> 
+		
+			<div class="box-container">
+				
+				<div class="box">
+					
+					<h3>Peluche de Hello Kitty</h3>
+					<p>5€</p>
+					<img src="peluche hellokitty.jpg" width="300" height="360" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+				<div class="box">
+					
+					<h3>Peluche de Kuromi</h3>
+					<p>5€</p>
+					<img src="peluche kuromi.jpg" width="320" height="360" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+				<div class="box">
+					
+					<h3>Peluche de Mymelody</h3>
+					<p>5€</p>
+					<img src="peluchemymelody.jpg" width="300" height="350" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+			</div>
+		
+		</section>
+		 <section class="product" id="product"> 
+		
+			<div class="box-container">
+				
+				<div class="box">
+					
+					<h3>Sudadera Hello Kitty</h3>
+					<p>25€</p>
+					<img src="sudaderahello.jpg" width="300" height="320" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+				<div class="box">
+					
+					<h3>Sudadera Kuromi</h3>
+					<p>25€</p>
+					<img src="sudaderakuromi.jpg" width="300" height="320" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+				<div class="box">
+				
+				    <h3>Bolso Mymelody</h3>
+					<p>15€</p>
+					<img src="bolsomelody.jpg" width="300" height="320" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+			</div>
+		
+		</section>
+		 <section class="product" id="product"> 
+		
+			<div class="box-container">
+				
+				<div class="box">
+					
+					<h3>Bolso Hello Kitty</h3>
+					<p>15€</p>
+					<img src="bolsohello.jpg" width="300" height="350" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+				<div class="box">
+					
+					<h3>Cuadernos sanrio</h3>
+					<p>6€</p>
+					<img src="cuadernos.jpg" width="300" height="320" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+				<div class="box">
+					
+					<h3>Boligrafos</h3>
+					<p>2€ cada uno</p>
+					<img src="bolis.jpg" width="300" height="320" >
+					<br>
+					<table>
+                    <input type="button" onclick="mensaje (Hapulsado el botón)" value="Comprar">
+                    </table>
+				</div>
+				
+			</div>
+		
+		</section>
+		<section class="piedeweb" id="piedeweb">
+			 <h3>María Cabezas López</h3>
+			 <div class="reloj">
+			 <p class="fecha"></p>
+			 <p class="tiempo"></p>
+        </section>
+		
+	
+	</body>
+	<TITLE>JavaScript Index</TITLE>
+
+<script Language="JavaScript">
+
+<!-- Helpers for JSI page...
+
+// Navigation - Start
+
+function goback(){
+
+alert("Good Bye!");
+
+history.go(-1);
+
+}
+
+function gettheDate() {
+
+Todays = new Date();
+
+TheDate = "" + (Todays.getMonth()+ 1) +" / "+ Todays.getDate() + " / " + (Todays.getYear() + 1900) 
+
+document.clock.thedate.value = TheDate;
+
+}
+
+// Navigation - Stop
+
+// Netscapes Clock - Start
+
+// this code was taken from Netscapes JavaScript documentation at
+
+// www.netscape.com on Jan.25.96
+
+
+
+var timerID = null;
+
+var timerRunning = false;
+
+function stopclock (){
+
+	if(timerRunning)
+
+		clearTimeout(timerID);
+
+	timerRunning = false;
+
+}
+
+
+
+function startclock () {
+
+	// Make sure the clock is stopped
+
+	stopclock();
+
+	gettheDate()
+
+	showtime();
+
+}
+
+
+
+function showtime () {
+
+	var now = new Date();
+
+	var hours = now.getHours();
+
+	var minutes = now.getMinutes();
+
+	var seconds = now.getSeconds()
+
+	var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+	timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+
+	timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+
+	timeValue += (hours >= 12) ? " P.M." : " A.M."
+
+	document.clock.face.value = timeValue;
+
+	// you could replace the above with this
+
+	// and have a clock on the status bar:
+
+	// window.status = timeValue;
+
+	timerID = setTimeout("showtime()",1000);
+
+	timerRunning = true;
+
+}
+
+// Netscapes Clock - Stop
+
+
+
+// end Helpers -->
+
+</script>
+
+</HEAD>
+
+
+
+<BODY bgcolor="#00FFFF" onLoad="startclock()">
+
+
+
+
+
+<CENTER>
+
+<table border>
+
+<tr>
+
+   <td><form name="clock" onSubmit="0"></td>
+
+</tr>
+
+
+
+<tr>
+
+   <td colspan=2>Hoy es: <input type="text" name="thedate" size=12
+
+           value=""></td>
+
+   <td colspan=2>La hora es: <input type="text" name="face" size=12
+
+           value=""></td></form>
+
+</tr>
+
+
+
+
+
+</table>
+
+</CENTER>
+
+
+
+<hr>
+
+
+</html>
